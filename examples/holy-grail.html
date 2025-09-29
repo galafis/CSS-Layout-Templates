@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail Layout - CSS Layout Templates</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Additional styles for this example */
+        .holy-grail header,
+        .holy-grail footer {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .holy-grail .sidebar,
+        .holy-grail aside {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+        }
+        
+        .holy-grail main {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="holy-grail">
+        <header>
+            <h1>Holy Grail Layout</h1>
+            <p>Layout clássico com header, footer e sidebars</p>
+        </header>
+        
+        <aside class="sidebar">
+            <h2>Sidebar Esquerda</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 10px 0;">Menu Item 1</li>
+                <li style="margin: 10px 0;">Menu Item 2</li>
+                <li style="margin: 10px 0;">Menu Item 3</li>
+                <li style="margin: 10px 0;">Menu Item 4</li>
+            </ul>
+        </aside>
+        
+        <main>
+            <h2>Conteúdo Principal</h2>
+            <p>Este é o layout Holy Grail, um dos padrões mais famosos em web design. Ele apresenta um cabeçalho, um rodapé e três colunas: sidebar esquerda, conteúdo principal e sidebar direita.</p>
+            
+            <h3>Características</h3>
+            <ul>
+                <li>Layout responsivo que se adapta a diferentes tamanhos de tela</li>
+                <li>Implementado com CSS Grid para fácil manutenção</li>
+                <li>Sidebars movem-se abaixo do conteúdo principal em dispositivos móveis</li>
+                <li>Suporte completo para navegadores modernos</li>
+            </ul>
+            
+            <h3>Quando usar</h3>
+            <p>Este layout é ideal para:</p>
+            <ul>
+                <li>Blogs e sites de conteúdo</li>
+                <li>Dashboards administrativos</li>
+                <li>Aplicações web complexas</li>
+                <li>Portais de notícias</li>
+            </ul>
+        </main>
+        
+        <aside>
+            <h2>Sidebar Direita</h2>
+            <div style="background: rgba(0,0,0,0.1); padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                <h3 style="margin-top: 0;">Widget 1</h3>
+                <p>Conteúdo do widget</p>
+            </div>
+            <div style="background: rgba(0,0,0,0.1); padding: 15px; border-radius: 8px;">
+                <h3 style="margin-top: 0;">Widget 2</h3>
+                <p>Conteúdo do widget</p>
+            </div>
+        </aside>
+        
+        <footer>
+            <p>Holy Grail Layout Example</p>
+            <p style="font-size: 0.9rem; opacity: 0.8;">Created by Gabriel Demetrios Lafis</p>
+        </footer>
+    </div>
+</body>
+</html>

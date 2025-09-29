@@ -3,11 +3,20 @@
  * @author Gabriel Demetrios Lafis
  */
 
+/* ===========================
+   CSS Variables
+   =========================== */
 :root {
     --primary-color: #667eea;
     --secondary-color: #764ba2;
+    --container-max-width: 1200px;
+    --grid-gap: 20px;
+    --border-radius: 8px;
 }
 
+/* ===========================
+   Base Styles
+   =========================== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -16,18 +25,24 @@ body {
     color: white;
 }
 
+/* Mobile First Container */
 .container {
-    max-width: 1200px;
+    width: 100%;
+    padding: 10px;
+    max-width: var(--container-max-width);
     margin: 0 auto;
     text-align: center;
 }
 
+/* ===========================
+   Button Styles
+   =========================== */
 .btn {
     background: white;
     color: var(--primary-color);
     border: none;
     padding: 12px 24px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     cursor: pointer;
     font-weight: bold;
     transition: transform 0.3s ease;
@@ -37,8 +52,215 @@ body {
     transform: translateY(-2px);
 }
 
+/* ===========================
+   Layout: CSS Grid
+   =========================== */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--grid-gap);
+    padding: 20px;
+}
+
+/* ===========================
+   Layout: Flexbox
+   =========================== */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--grid-gap);
+}
+
+/* ===========================
+   Holy Grail Layout
+   =========================== */
+.holy-grail {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar main aside"
+        "footer footer footer";
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.holy-grail header {
+    grid-area: header;
+}
+
+.holy-grail .sidebar {
+    grid-area: sidebar;
+}
+
+.holy-grail main {
+    grid-area: main;
+}
+
+.holy-grail aside {
+    grid-area: aside;
+}
+
+.holy-grail footer {
+    grid-area: footer;
+}
+
+/* ===========================
+   Card Layout
+   =========================== */
+.card-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--grid-gap);
+    padding: var(--grid-gap);
+}
+
+.card {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===========================
+   Sidebar Layout
+   =========================== */
+.sidebar-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: var(--grid-gap);
+}
+
+.sidebar-layout .sidebar {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: var(--border-radius);
+}
+
+.sidebar-layout .content {
+    padding: 20px;
+}
+
+/* ===========================
+   Hero Section
+   =========================== */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-section .cta {
+    margin-top: 30px;
+}
+
+/* ===========================
+   Navigation Layout
+   =========================== */
+.nav-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+}
+
+.nav-layout ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===========================
+   Author Section
+   =========================== */
 .author {
     margin-top: 40px;
     font-style: italic;
     opacity: 0.9;
+}
+
+/* ===========================
+   Responsive Breakpoints
+   =========================== */
+
+/* Tablet: 768px - 1023px */
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .hero-section h1 {
+        font-size: 4rem;
+    }
+}
+
+/* Desktop: 1024px+ */
+@media (min-width: 1024px) {
+    .container {
+        max-width: var(--container-max-width);
+    }
+    
+    .hero-section h1 {
+        font-size: 5rem;
+    }
+}
+
+/* Large Desktop: 1440px+ */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 767px) {
+    .holy-grail {
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-layout {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-layout ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
 }

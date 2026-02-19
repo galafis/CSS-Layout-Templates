@@ -25,6 +25,36 @@ Este projeto oferece uma base sólida para implementação de layouts responsivo
 - **CSS3**: Grid, Flexbox, Media Queries
 - **CSS Variables**: Sistema de design consistente
 
+## 🏗️ Sistema de Layouts / Layout System
+
+```mermaid
+graph TD
+    A[CSS Layout Templates] --> B[Templates de Layout]
+    B --> B1[Holy Grail Layout]
+    B --> B2[Card Layout]
+    B --> B3[Sidebar Layout]
+    B --> B4[Hero Section]
+    B --> B5[Navigation Layouts]
+    B1 --> C[Tecnologias de Layout]
+    B2 --> C
+    B3 --> C
+    B4 --> C
+    B5 --> C
+    C --> C1[CSS Grid]
+    C --> C2[Flexbox]
+    C --> C3[CSS Variables]
+    C1 --> D[Responsividade]
+    C2 --> D
+    D --> D1[Mobile 320px-767px]
+    D --> D2[Tablet 768px-1023px]
+    D --> D3[Desktop 1024px+]
+    D --> D4[Large Desktop 1440px+]
+    D1 --> E[Output Final]
+    D2 --> E
+    D3 --> E
+    D4 --> E
+```
+
 ## 📁 Estrutura do Projeto
 
 ```
@@ -234,3 +264,92 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 ---
 
 ⭐ Se este projeto foi útil para você, considere deixar uma estrela! Isso me ajuda a saber que o trabalho está sendo valorizado e me motiva a continuar melhorando o projeto.
+
+---
+
+# CSS Layout Templates — English
+
+Collection of responsive layout templates implemented with modern CSS, including Flexbox, CSS Grid, and advanced positioning techniques for building professional web interfaces.
+
+## 🎯 Demo
+
+This project provides a solid foundation for implementing responsive layouts using modern CSS best practices. Open `index.html` to see all layouts in action!
+
+## ✨ Features
+
+- **Responsive Layouts**: Adaptable to different devices
+- **CSS Grid & Flexbox**: Modern layout techniques
+- **Mobile-First**: Optimized responsive approach
+- **Cross-Browser**: Wide compatibility
+- **Semantic**: Structured and accessible HTML
+- **Practical Examples**: Ready-to-use templates
+
+## 🏗️ Layout System
+
+```mermaid
+graph TD
+    A[CSS Layout Templates] --> B[Layout Templates]
+    B --> B1[Holy Grail Layout]
+    B --> B2[Card Layout]
+    B --> B3[Sidebar Layout]
+    B --> B4[Hero Section]
+    B --> B5[Navigation Layouts]
+    B1 --> C[Layout Technologies]
+    B2 --> C
+    B3 --> C
+    B4 --> C
+    B5 --> C
+    C --> C1[CSS Grid]
+    C --> C2[Flexbox]
+    C --> C3[CSS Variables]
+    C1 --> D[Responsive Breakpoints]
+    C2 --> D
+    D --> D1[Mobile 320px-767px]
+    D --> D2[Tablet 768px-1023px]
+    D --> D3[Desktop 1024px+]
+    D --> D4[Large Desktop 1440px+]
+    D1 --> E[Final Output]
+    D2 --> E
+    D3 --> E
+    D4 --> E
+```
+
+## 🚀 Quick Start
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/galafis/CSS-Layout-Templates.git
+cd CSS-Layout-Templates
+```
+
+2. Open `index.html` in your browser or use a local server:
+
+```bash
+python -m http.server 8000
+```
+
+3. Visit `http://localhost:8000` and explore the layouts!
+
+## 📐 Supported Layout Patterns
+
+- **Holy Grail Layout**: Header, footer, sidebar, and main content
+- **Card Layout**: Responsive card grid with hover effects
+- **Sidebar Layout**: Layout with fixed or collapsible sidebar
+- **Hero Section**: Featured sections with call-to-action
+- **Navigation Layouts**: Responsive menus and adaptive navigation
+
+## 📄 License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+**Gabriel Demetrios Lafis**
+
+- GitHub: [@galafis](https://github.com/galafis)
+- Email: gabrieldemetrios@gmail.com
+
+---
+
+⭐ If this project was helpful, consider leaving a star!
